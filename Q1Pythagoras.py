@@ -16,8 +16,9 @@ while not finished:
         u = str(input("Please enter a unit (ex. cm, ft, etc.): "))
         firstc = (a**2) + (b**2)
         secondc = math.sqrt(firstc)
-        c = round(decimal.Decimal(str(secondc)))
+        c = round(decimal.Decimal(str(secondc)), 2)
         print("All results are rounded to 2 decimal places.")
         print("The hypotenuse of your triangle is: " + str(c) + " " + u)
+        finished = True
     except ValueError:
         print("Please enter a POSITIVE NUMBER!")
